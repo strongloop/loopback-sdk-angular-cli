@@ -1,0 +1,50 @@
+{
+  "name": "loopback-angular-cli",
+  "version": "0.1.0",
+  "description": "CLI tools for auto-generating Angular $resource services for LoopBack",
+  "bin": {
+    "lb-ng": "bin/lb-ng",
+    "lb-ng-doc": "bin/lb-ng-doc"
+  },
+  "scripts": {
+    "pretest": "jshint .",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/strongloop/loopback-angular-cli.git"
+  },
+  "keywords": [
+    "loopback",
+    "angular",
+    "cli"
+  ],
+  "author": {
+    "name": "StrongLoop, Inc.",
+    "email": "callback@strongloop.com",
+    "url": "http://strongloop.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/strongloop/loopback-angular/issues"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "loopback-angular": "~0.1.0",
+    "optimist": "~0.6.0",
+    "semver": "~2.2.1",
+    "docular": "~0.6.3"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*",
+    "loopback-datasource-juggler": "~1.2.13",
+    "loopback": "~1.6.0",
+    "mocha-as-promised": "~2.0.0",
+    "bluebird": "~1.0.1",
+    "debug": "~0.7.4",
+    "fs.extra": "~1.2.1"
+  }
+}
