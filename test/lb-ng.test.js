@@ -2,7 +2,7 @@ var extend = require('util')._extend;
 var fs = require('fs.extra');
 var path = require('path');
 var Promise = require('bluebird');
-var execFile = Promise.promisify(require('child_process').execFile);
+var exec = Promise.promisify(require('child_process').exec);
 var expect = require('chai').expect;
 var debug = require('debug')('test');
 var parse = require('loopback-angular/parse-helper');
@@ -65,7 +65,7 @@ describe('lb-ng', function() {
     var argv = [require.resolve('../bin/lb-ng')]
       .concat(Array.prototype.slice.call(arguments));
     debug('--EXECFILE[%s]--', argv.join(' '));
-    return execFile(process.execPath, argv)
+    return exec(argv.join(' '))
       .then(function(args) {
         debug('--STDOUT--\n%s\n--STDERR--\n%s\n--END--', args[0], args[1]);
         return args;
