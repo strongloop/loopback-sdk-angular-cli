@@ -1,6 +1,9 @@
 var loopback = require('loopback');
 var app = loopback();
 
+// Listen on an ephemeral port
+app.set('port', 0);
+
 // Setup default datasources for autoAttach()
 app.dataSource('db', { connector: 'memory', defaultForType: 'db' });
 app.dataSource('mail', { connector: 'mail', defaultForType: 'mail' });
