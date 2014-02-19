@@ -63,9 +63,11 @@ describe('lb-ng', function() {
 
   function runLbNg() {
     var argv = [require.resolve('../bin/lb-ng')]
-      .concat(Array.prototype.slice.call(arguments));
-    debug('--EXECFILE[%s]--', argv.join(' '));
-    return exec(argv.join(' '))
+                .concat(Array.prototype.slice.call(arguments))
+                .map(JSON.stringify)
+                .join(' ');
+    debug('--EXECFILE[%s]--', argv);
+    return exec(argv)
       .then(function(args) {
         debug('--STDOUT--\n%s\n--STDERR--\n%s\n--END--', args[0], args[1]);
         return args;
