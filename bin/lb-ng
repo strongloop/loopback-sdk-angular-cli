@@ -42,7 +42,12 @@ if (outputFile) {
 // The app.js scaffolded by `slc lb project` loads strong-agent module that
 // used to have a bug where it prevented the application from exiting.
 // To work around that issue, we are explicitly exiting here.
-process.exit();
+//
+// The exit is deferred to the next tick in order to prevent the Node bug:
+// https://github.com/joyent/node/issues/3584
+process.nextTick(function() {
+  process.exit();
+});
 
 //--- helpers ---//
 
