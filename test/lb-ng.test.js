@@ -62,7 +62,7 @@ describe('lb-ng', function() {
   //-- Helpers --
 
   function runLbNg() {
-    var argv = [require.resolve('../bin/lb-ng')]
+    var argv = [process.execPath, require.resolve('../bin/lb-ng')]
                 .concat(Array.prototype.slice.call(arguments))
                 .map(JSON.stringify)
                 .join(' ');
