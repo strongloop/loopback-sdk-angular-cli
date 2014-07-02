@@ -5,7 +5,7 @@ var Promise = require('bluebird');
 var exec = Promise.promisify(require('child_process').exec);
 var expect = require('chai').expect;
 var debug = require('debug')('test');
-var parse = require('loopback-angular/parse-helper');
+var parse = require('loopback-sdk-angular/parse-helper');
 
 describe('lb-ng', function() {
   var sampleAppJs = require.resolve('./fixtures/app.js');
