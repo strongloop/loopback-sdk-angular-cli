@@ -14,7 +14,7 @@ the conformance by running the following command:
 ## Automated tests
 
 We use Mocha for running our tests. See
-[test/lb-ng.test.js](https://github.com/strongloop/loopback-angular/blob/master/test/lb-ng.test.js)
+[test/lb-ng.test.js](https://github.com/strongloop/loopback-sdk-angular/blob/master/test/lb-ng.test.js)
 for an example.
 
 You can run the test in the usual way:
