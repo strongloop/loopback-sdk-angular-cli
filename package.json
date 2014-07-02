@@ -1,6 +1,6 @@
 {
-  "name": "loopback-angular-cli",
-  "version": "1.1.1",
+  "name": "loopback-sdk-angular-cli",
+  "version": "1.1.2",
   "description": "CLI tools for auto-generating Angular $resource services for LoopBack",
   "bin": {
     "lb-ng": "bin/lb-ng",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/strongloop/loopback-angular-cli.git"
+    "url": "git://github.com/strongloop/loopback-sdk-angular-cli.git"
   },
   "keywords": [
     "loopback",
@@ -26,10 +26,10 @@
   },
   "license": {
     "name": "Dual MIT/StrongLoop",
-    "url": "https://github.com/strongloop/loopback-angular-cli/blob/master/LICENSE"
+    "url": "https://github.com/strongloop/loopback-sdk-angular-cli/blob/master/LICENSE"
   },
   "bugs": {
-    "url": "https://github.com/strongloop/loopback-angular-cli/issues"
+    "url": "https://github.com/strongloop/loopback-sdk-angular-cli/issues"
   },
   "engines": {
     "node": ">= 0.8.0"
@@ -37,7 +37,7 @@
   "dependencies": {
     "express": "3.x",
     "docular": "^0.6.3",
-    "loopback-angular": "^1.1.0",
+    "loopback-sdk-angular": "^1.1.1",
     "optimist": "^0.6.1",
     "semver": "^2.2.1"
   },
