@@ -3,11 +3,12 @@
 var path = require('path');
 var docular = require('docular');
 var optimist = require('optimist');
+var express = require('express');
 
 var argv = optimist
   .usage('Display @ngdoc documentation in an Angular source file.' +
     'Usage\n' +
-    '    $0 [options] client/js/lb-services.js')
+    '    $0 [options] client/js/lb-services.js [output-dir]')
   .describe('p', 'The port for the web server to listen at')
   .default('p', 3030)
   .alias({ p: 'port' })
@@ -15,25 +16,39 @@ var argv = optimist
   .argv;
 
 var services = path.resolve(argv._[0]);
+var outputDir = path.resolve(argv._[1] || '.lbngdoc');
 var port = argv.port;
 
 console.error('Using lb-ng file %j', services);
 
-docular.genDocs({
-  groups: [
-    {
-      groupTitle: 'LoopBack',
-      groupId: 'loopback',
-      sections: [
-        {
-          id: 'lbServices',
-          title: 'LoopBack Services',
-          scripts: [ services ]
-        }
-      ]
-    }
-  ]
-}, function() {
-  docular.server({ port: port });
-  console.log('Browse the documentation at http://localhost:%d/', port);
-});
+docular
+  .genDocs({
+    groupTitle: 'LoopBack Angular SDK',
+    groups: [
+      {
+        groupTitle: 'LoopBack Services',
+        groupId: 'lbServices',
+        files: [ services ]
+      }
+    ],
+    plugins: [
+      require('docular-ng-plugin'),
+      require('docular-markdown-plugin')
+    ],
+    'docular_webapp_target': outputDir
+  })
+  .then(function() {
+    var app = express();
+    app.use(express.static(outputDir));
+    app.use('/', function(req, res) {
+      // support Angular's HTML5 routes
+      res.sendFile(path.join(outputDir, 'index.html'));
+    });
+    app.listen(port, function() {
+      console.log('Browse the documentation at http://localhost:%d/', port);
+    });
+  })
+  .catch(function(err) {
+    console.log('Unhandled error.', err);
+    process.exit(1);
+  });

@@ -35,7 +35,10 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
-    "docular": "^0.6.3",
+    "docular": "0.8.3",
+    "docular-markdown-plugin": "0.0.3",
+    "docular-ng-plugin": "0.0.5",
+    "express": "^4.9.8",
     "loopback-sdk-angular": "^1.1.1",
     "optimist": "^0.6.1",
     "semver": "^2.2.1"
