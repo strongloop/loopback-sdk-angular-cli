@@ -32,6 +32,8 @@ describe('lb-ng', function() {
           expect(parse.moduleName(script)).to.equal('lbServices');
           // the value "/rest-api-root" is hard-coded in sampleAppJs
           expect(parse.baseUrl(script)).to.equal('/rest-api-root');
+          // the value "upperCaseFirst" is the --name-case default
+          expect(parse.ngNameCase(script)).to.equal('upperCaseFirst');
         });
     });
 
@@ -46,6 +48,13 @@ describe('lb-ng', function() {
     return runLbNg('-u', 'http://foo/bar', sampleAppJs)
       .spread(function(script, stderr) {
         expect(parse.baseUrl(script)).to.equal('http://foo/bar');
+      });
+  });
+
+  it('uses the nameCase from command-line', function() {
+    return runLbNg('-c', 'pascalCase', sampleAppJs)
+      .spread(function(script, stderr) {
+        expect(parse.ngNameCase(script)).to.equal('pascalCase');
       });
   });
 

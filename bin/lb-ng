@@ -12,8 +12,10 @@ var argv = optimist
     '\n    $0 [options] server/app.js [client/js/lb-services.js]')
   .describe('m', 'The name for generated Angular module.')
   .default('m', 'lbServices')
+  .describe('c', 'Name casing to use for model name ["upperCaseFirst", "pascalCase" or "camelCase"]')
+  .default('c', 'upperCaseFirst')
   .describe('u', 'URL of the REST API end-point')
-  .alias({ u : 'url', m: 'module-name' })
+  .alias({ u : 'url', m: 'module-name', c: 'name-case' })
   .demand(1)
   .argv;
 
@@ -26,9 +28,10 @@ assertLoopBackVersion();
 
 var ngModuleName = argv['module-name'] || 'lbServices';
 var apiUrl = argv['url'] || app.get('restApiRoot') || '/api';
+var ngNameCase = argv['name-case'] || 'upperCaseFirst';
 
-console.error('Generating %j for the API endpoint %j', ngModuleName, apiUrl);
-var result = generator.services(app, ngModuleName, apiUrl);
+console.error('Generating %j for the API endpoint %j using name case %j', ngModuleName, apiUrl, ngNameCase);
+var result = generator.services(app, ngModuleName, apiUrl, ngNameCase);
 
 if (outputFile) {
   outputFile = path.resolve(outputFile);
