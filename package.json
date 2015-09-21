@@ -24,10 +24,7 @@
     "email": "callback@strongloop.com",
     "url": "http://strongloop.com/"
   },
-  "license": {
-    "name": "Dual MIT/StrongLoop",
-    "url": "https://github.com/strongloop/loopback-sdk-angular-cli/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/strongloop/loopback-sdk-angular-cli/issues"
   },
