@@ -25,7 +25,7 @@ var app = require(appFile);
 assertLoopBackVersion();
 
 var ngModuleName = argv['module-name'] || 'lbServices';
-var apiUrl = argv['url'] || app.get('restApiRoot') || '/api';
+var apiUrl = argv['url'] || '//' + app.get('host') + (app.get('port') !== 80 ? ':' + app.get('port') : '') + app.get('restApiRoot') || '/api';
 
 console.error('Generating %j for the API endpoint %j', ngModuleName, apiUrl);
 var result = generator.services(app, ngModuleName, apiUrl);

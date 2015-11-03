@@ -30,8 +30,8 @@ describe('lb-ng', function() {
         .spread(function(script, stderr) {
           // the value "lbServices" is the --module-name default
           expect(parse.moduleName(script)).to.equal('lbServices');
-          // the value "/rest-api-root" is hard-coded in sampleAppJs
-          expect(parse.baseUrl(script)).to.equal('/rest-api-root');
+          // the host, port and restApiUrl values are hard-coded in sampleAppJs
+          expect(parse.baseUrl(script)).to.equal('//0.0.0.0:3003/api-root');
         });
     });
 
