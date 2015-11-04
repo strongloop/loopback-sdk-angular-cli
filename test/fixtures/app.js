@@ -13,6 +13,8 @@ loopback.autoAttach();
 
 
 // Configure REST API path
-app.set('restApiRoot', '/rest-api-root');
+app.set('restApiRoot', '/api-root');
+app.set('host', '0.0.0.0');
+app.set('port', '3003');
 
 module.exports = app;
