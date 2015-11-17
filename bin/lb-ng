@@ -13,7 +13,8 @@ var argv = optimist
   .describe('m', 'The name for generated Angular module.')
   .default('m', 'lbServices')
   .describe('u', 'URL of the REST API end-point')
-  .alias({ u : 'url', m: 'module-name' })
+  .describe('s', 'Include model schema definition')
+  .alias({ u : 'url', m: 'module-name', s: 'include-schema' })
   .demand(1)
   .argv;
 
@@ -26,9 +27,10 @@ assertLoopBackVersion();
 
 var ngModuleName = argv['module-name'] || 'lbServices';
 var apiUrl = argv['url'] || app.get('restApiRoot') || '/api';
+var includeSchemas = argv['include-schema'];
 
-console.error('Generating %j for the API endpoint %j', ngModuleName, apiUrl);
-var result = generator.services(app, ngModuleName, apiUrl);
+console.error('Generating %j for the API endpoint %j', ngModuleName, apiUrl, includeSchemas);
+var result = generator.services(app, ngModuleName, apiUrl, includeSchemas);
 
 if (outputFile) {
   outputFile = path.resolve(outputFile);
