@@ -1,0 +1,21 @@
+var loopback = require('loopback');
+var boot = require('loopback-boot');
+
+var app = loopback();
+
+// Listen on an ephemeral port
+app.set('port', 0);
+
+// Setup default datasources for autoAttach()
+app.dataSource('db', { connector: 'memory', defaultForType: 'db' });
+app.dataSource('mail', { connector: 'mail', defaultForType: 'mail' });
+
+// Attach all built-in models
+loopback.autoAttach();
+
+boot(app, __dirname);
+
+// Configure REST API path
+app.set('restApiRoot', '/rest-api-root');
+
+module.exports = app;

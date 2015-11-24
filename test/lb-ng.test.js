@@ -9,6 +9,7 @@ var parse = require('loopback-sdk-angular/parse-helper');
 
 describe('lb-ng', function() {
   var sampleAppJs = require.resolve('./fixtures/app.js');
+  var sampleAsyncAppJs = require.resolve('./fixtures/async-app/app.js');
   var SANDBOX = path.resolve(__dirname, 'sandbox');
 
   beforeEach(resetSandbox);
@@ -57,6 +58,18 @@ describe('lb-ng', function() {
         expect(parse.moduleName(script)).to.equal('a-module');
         expect(stdout).to.equal('');
       });
+  });
+
+  it('supports async booting apps', function() {
+    this.timeout(3000);
+    return runLbNg(sampleAsyncAppJs)
+    .spread(function(script, stderr) {
+      expect(parse.moduleName(script)).to.equal('lbServices');
+      expect(
+        script.match(/\nmodule\.factory\(\s+"ASYNCMODEL"/),
+        'presence of late-initialized model'
+      ).to.be.ok();
+    });
   });
 
   //-- Helpers --
