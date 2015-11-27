@@ -15,25 +15,23 @@ describe('lb-ng', function() {
   beforeEach(resetSandbox);
 
   it('prints help on no arguments', function() {
-    return runLbNg()
-      .then(function() {
-        throw new Error('lb-ng was supposed to fail with non-zero exit code');
-      })
-      .catch(function(err) {
-        expect(err.code, 'exit code').to.equal(1);
-        expect(err.message).to.contain('Usage');
-      });
+    return runLbNg().then(function() {
+      throw new Error('lb-ng was supposed to fail with non-zero exit code');
+    })
+    .catch(function(err) {
+      expect(err.code, 'exit code').to.equal(1);
+      expect(err.message).to.contain('Usage');
+    });
   });
 
   it('generates "lbServices" module with app.restApiRoot url',
     function() {
-      return runLbNg(sampleAppJs)
-        .spread(function(script, stderr) {
-          // the value "lbServices" is the --module-name default
-          expect(parse.moduleName(script)).to.equal('lbServices');
-          // the value "/rest-api-root" is hard-coded in sampleAppJs
-          expect(parse.baseUrl(script)).to.equal('/rest-api-root');
-        });
+      return runLbNg(sampleAppJs).spread(function(script, stderr) {
+        // the value "lbServices" is the --module-name default
+        expect(parse.moduleName(script)).to.equal('lbServices');
+        // the value "/rest-api-root" is hard-coded in sampleAppJs
+        expect(parse.baseUrl(script)).to.equal('/rest-api-root');
+      });
     });
 
   it('uses the module name from command-line', function() {
@@ -61,10 +59,7 @@ describe('lb-ng', function() {
   });
 
   it('supports async booting apps', function() {
-    this.timeout(3000);
-    return runLbNg(sampleAsyncAppJs)
-    .spread(function(script, stderr) {
-      expect(parse.moduleName(script)).to.equal('lbServices');
+    return runLbNg(sampleAsyncAppJs).spread(function(script, stderr) {
       expect(
         script.match(/\nmodule\.factory\(\s+"ASYNCMODEL"/),
         'presence of late-initialized model'
