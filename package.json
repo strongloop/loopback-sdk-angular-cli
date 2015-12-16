@@ -32,7 +32,6 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
-    "docular": "^0.6.3",
     "loopback-sdk-angular": "^1.1.1",
     "optimist": "^0.6.1",
     "semver": "^2.2.1"
