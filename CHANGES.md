@@ -1,3 +1,9 @@
+2015-12-17, Version 2.0.0
+=========================
+
+ * Remove lb-ng-doc and docular dependency (Miroslav Bajtoš)
+
+
 2015-11-30, Version 1.2.0
 =========================
 
