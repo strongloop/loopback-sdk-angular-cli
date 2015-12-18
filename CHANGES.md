@@ -1,3 +1,9 @@
+2015-12-18, Version 2.0.1
+=========================
+
+ * remove ref to removed lb-ng-doc bin (Ryan Graham)
+
+
 2015-12-17, Version 2.0.0
 =========================
 
