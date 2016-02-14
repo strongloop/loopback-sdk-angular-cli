@@ -13,7 +13,9 @@ var argv = optimist
   .describe('m', 'The name for generated Angular module.')
   .default('m', 'lbServices')
   .describe('u', 'URL of the REST API end-point')
-  .alias({ u : 'url', m: 'module-name' })
+  .describe('l', 'Client`s library (angular, angular2)')
+  .default('l', 'angular')
+  .alias({ u : 'url', m: 'module-name', l: 'library' })
   .demand(1)
   .argv;
 
