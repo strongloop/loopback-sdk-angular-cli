@@ -62,7 +62,7 @@ describe('lb-ng', function() {
   it('supports async booting apps', function() {
     return runLbNg(sampleAsyncAppJs).spread(function(script, stderr) {
       expect(
-        script.match(/\nmodule\.factory\(\s+"ASYNCMODEL"/),
+        script.match(/[\n\s]*module\.factory\([\s\n]*"ASYNCMODEL"/),
         'presence of late-initialized model'
       ).to.be.ok();
     });
