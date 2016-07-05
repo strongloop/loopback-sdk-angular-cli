@@ -15,4 +15,11 @@ app.model(User, { dataSource: 'db' });
 
 app.set('restApiRoot', '/rest-api-root');
 
+app.dataSource('db', { connector: 'memory' });
+var TestModel = app.registry.createModel(
+    'TestModel',
+    { foobaz: 'string' }
+);
+app.model(TestModel, { dataSource: 'db' });
+
 module.exports = app;

@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "bluebird": "^1.2.4",
-    "loopback-sdk-angular": "^1.1.1",
+    "loopback-sdk-angular": "^1.8.0",
     "optimist": "^0.6.1",
     "semver": "^2.2.1",
     "strong-globalize": "^2.6.0"
