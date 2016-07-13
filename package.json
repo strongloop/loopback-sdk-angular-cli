@@ -31,7 +31,7 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
-    "loopback-sdk-angular": "strongloop/loopback-sdk-angular",
+    "loopback-sdk-angular": "^1.8.0",
     "optimist": "^0.6.1",
     "semver": "^2.2.1"
   },

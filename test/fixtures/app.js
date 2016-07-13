@@ -8,10 +8,18 @@ var app = loopback();
 
 app.set('restApiRoot', '/rest-api-root');
 
+app.dataSource('db', { connector: 'memory' });
+var TestModel = app.registry.createModel(
+    'TestModel',
+    { foobaz: 'string' }
+);
+app.model(TestModel, { dataSource: 'db' });
+
 // this is a hack to give the angular SDK a model to export
-// TODO: create and inject a model the "proper" way
+// TODO: find out why the model created above is not
+//       returned by the rest adapter
 var TestClass = {
-    name: 'TestClass',
+    name: 'TestModel',
     sharedClass: {
         ctor: {
             settings: {
@@ -23,15 +31,6 @@ var TestClass = {
         getFullPath: function() {}
     },
     methods: [],
-
-};
-
-app.models.TestClass = {
-    definition: {
-        properties: {
-            name: 'string',
-        },
-    },
 };
 
 app.handler('rest').adapter.getClasses = function() {

@@ -38,7 +38,11 @@ function runGenerator() {
   var includeSchema = argv['include-schema'] || false;
 
   console.error('Generating %j for the API endpoint %j', ngModuleName, apiUrl);
-  var result = generator.services(app, {ngModuleName: ngModuleName, apiUrl: apiUrl, includeSchema: includeSchema});
+  var result = generator.services(app, {
+    ngModuleName: ngModuleName,
+    apiUrl: apiUrl,
+    includeSchema: includeSchema
+  });
 
   if (outputFile) {
     outputFile = path.resolve(outputFile);
