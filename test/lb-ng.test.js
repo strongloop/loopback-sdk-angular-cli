@@ -54,6 +54,14 @@ describe('lb-ng', function() {
       });
   });
 
+  it('passes the include-schema flag from the command-line', function() {
+    return runLbNg('-s', sampleAppJs)
+      .spread(function(script, stderr) {
+        expect(script).to.contain('R\.schema =');
+        expect(script).to.contain('schema of the model');
+      });
+  });
+
   it('saves the script to a file', function() {
     var outfile = path.resolve(SANDBOX, 'lb-services.js');
     return runLbNg('-m', 'a-module', sampleAppJs, outfile)
