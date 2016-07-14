@@ -13,7 +13,9 @@ var argv = optimist
   .describe('m', 'The name for generated Angular module.')
   .default('m', 'lbServices')
   .describe('u', 'URL of the REST API end-point')
-  .alias({ u : 'url', m: 'module-name' })
+  .describe('l', 'Client`s library (angular, angular2)')
+  .default('l', 'angular')
+  .alias({ u : 'url', m: 'module-name', l: 'library' })
   .demand(1)
   .argv;
 
@@ -33,9 +35,10 @@ if (app.booting) {
 function runGenerator() {
   var ngModuleName = argv['module-name'] || 'lbServices';
   var apiUrl = argv['url'] || app.get('restApiRoot') || '/api';
+  var framework = argv['l'] || 'angular';
 
   console.error('Generating %j for the API endpoint %j', ngModuleName, apiUrl);
-  var result = generator.services(app, ngModuleName, apiUrl);
+  var result = generator.services(app, ngModuleName, apiUrl, framework);
 
   if (outputFile) {
     outputFile = path.resolve(outputFile);
