@@ -73,6 +73,13 @@ describe('lb-ng', function() {
     });
   });
 
+  it('does not truncate the output', function() {
+    return runLbNg(sampleAppJs)
+      .spread(function(script, stderr) {
+        expect(script).to.match(/\}\)\(window, window.angular\);/);
+      });
+  });
+
   //-- Helpers --
 
   function runLbNg() {
