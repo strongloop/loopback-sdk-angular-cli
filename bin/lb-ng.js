@@ -1,18 +1,23 @@
 #!/usr/bin/env node
 
-var fs = require('fs');
 var path = require('path');
+var SG = require('strong-globalize');
+SG.SetRootDir(path.resolve(__dirname, '..'));
+var g = SG();
+var fs = require('fs');
 var semver = require('semver');
 var optimist = require('optimist');
 var generator = require('loopback-sdk-angular');
 
 var argv = optimist
-  .usage('Generate Angular $resource services for your LoopBack application.' +
+  .usage(g.f(
+    'Generate {{Angular $resource}} services ' +
+    'for your {{LoopBack}} application.' +
     '\nUsage:' +
-    '\n    $0 [options] server/app.js [client/js/lb-services.js]')
-  .describe('m', 'The name for generated Angular module.')
+    '\n    $0 {{[options] server/app.js [client/js/lb-services.js]}}'))
+  .describe('m', g.f('The name for generated {{Angular}} module.'))
   .default('m', 'lbServices')
-  .describe('u', 'URL of the REST API end-point')
+  .describe('u', g.f('URL of the REST API end-point'))
   .alias({ u : 'url', m: 'module-name' })
   .demand(1)
   .argv;
@@ -20,7 +25,7 @@ var argv = optimist
 var appFile = path.resolve(argv._[0]);
 var outputFile = argv._[1];
 
-console.error('Loading LoopBack app %j', appFile);
+g.error('Loading {{LoopBack}} app %j', appFile);
 var app = require(appFile);
 assertLoopBackVersion();
 
@@ -34,15 +39,15 @@ function runGenerator() {
   var ngModuleName = argv['module-name'] || 'lbServices';
   var apiUrl = argv['url'] || app.get('restApiRoot') || '/api';
 
-  console.error('Generating %j for the API endpoint %j', ngModuleName, apiUrl);
+  g.error('Generating %j for the API endpoint %j', ngModuleName, apiUrl);
   var result = generator.services(app, ngModuleName, apiUrl);
 
   if (outputFile) {
     outputFile = path.resolve(outputFile);
-    console.error('Saving the generated services source to %j', outputFile);
+    g.error('Saving the generated services source to %j', outputFile);
     fs.writeFileSync(outputFile, result);
   } else {
-    console.error('Dumping to stdout');
+    g.error('Dumping to {{stdout}}');
     process.stdout.write(result);
   }
 
@@ -67,10 +72,10 @@ function assertLoopBackVersion() {
   var loopback = Module._load('loopback', Module._cache[appFile]);
 
   if (semver.lt(loopback.version, '1.6.0')) {
-    console.error(
-      '\nThe code generator does not support applications based\n' +
-        'on LoopBack versions older than 1.6.0. Please upgrade your\n' +
-        'project to a recent version of LoopBack and run this tool again.\n');
+    g.error('\n' +
+      'The code generator does not support applications based on\n' +
+      '{{LoopBack}} versions older than 1.6.0. Please upgrade your project\n' +
+      'to a recent version of {{LoopBack}} and run this tool again.\n');
     process.exit(1);
   }
 }

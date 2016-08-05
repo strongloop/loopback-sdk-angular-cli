@@ -12,3 +12,5 @@
 *.swo
 node_modules
 /test/sandbox
+intl/*
+!intl/en/

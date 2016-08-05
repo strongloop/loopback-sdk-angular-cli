@@ -3,7 +3,7 @@
   "version": "2.0.1",
   "description": "CLI tools for auto-generating Angular $resource services for LoopBack",
   "bin": {
-    "lb-ng": "bin/lb-ng"
+    "lb-ng": "bin/lb-ng.js"
   },
   "scripts": {
     "pretest": "jshint .",
@@ -33,7 +33,8 @@
   "dependencies": {
     "loopback-sdk-angular": "^1.1.1",
     "optimist": "^0.6.1",
-    "semver": "^2.2.1"
+    "semver": "^2.2.1",
+    "strong-globalize": "^2.6.0"
   },
   "devDependencies": {
     "bluebird": "^1.2.1",
