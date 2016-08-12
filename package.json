@@ -40,7 +40,7 @@
   "devDependencies": {
     "bluebird": "^1.2.1",
     "chai": "^1.9.1",
-    "debug": "^0.8.0",
+    "debug": "^2.2.0",
     "fs.extra": "^1.2.1",
     "jshint": "^2.5.0",
     "loopback": "^2.25.0",
