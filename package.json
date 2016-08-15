@@ -7,7 +7,7 @@
   },
   "scripts": {
     "pretest": "jshint .",
-    "test": "mocha"
+    "test": "mocha --timeout 5000"
   },
   "repository": {
     "type": "git",
