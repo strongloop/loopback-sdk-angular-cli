@@ -1,4 +1,22 @@
-2015-12-18, Version 2.0.1
+2016-09-05, Version 2.1.0
+=========================
+
+ * Increase mocha timeout to 5000ms (David Cheung)
+
+ * Update debug dependency and exec not inherit env (David Cheung)
+
+ * Fix process.stdout exiting before done (David Cheung)
+
+ * Globalize loopback-angular-sdk-cli (David Cheung)
+
+ * Update URLs in CONTRIBUTING.md (#44) (Ryan Graham)
+
+ * update copyright notices and license (Ryan Graham)
+
+ * Update test's regex to reflect SDK change (David Cheung)
+
+
+2015-12-17, Version 2.0.1
 =========================
 
  * remove ref to removed lb-ng-doc bin (Ryan Graham)
