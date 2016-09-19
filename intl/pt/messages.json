@@ -1,0 +1,11 @@
+{
+  "03bb755ed8213986b1862be937b296bb": "O nome para o módulo {{Angular}} gerado.",
+  "25eecfaa310e55ace4ef6eba593ba32e": "Gerando {0} para o endpoint da API {1}",
+  "3669f5dd8a727a4f4247d7ad86993e0c": "\nO gerador de código não suporta aplicativos baseados em\nversões de {{LoopBack}} mais antigas que 1.6.0. Faça upgrade de seu projeto\npara uma versão recente de {{LoopBack}} e execute esta ferramenta novamente.\n",
+  "af39e85bbd74a37c9a8beec4268564bd": "Gere serviços de {{Angular $resource}} para seu aplicativo {{LoopBack}}.\nUso:\n    $0 {{[options] server/app.js [client/js/lb-services.js]}}",
+  "dbef1e1c2cc9f52ae9aacca33e9d92c2": "Salvando a origem de serviços gerados em {0}",
+  "dff77762368d4e45c34a01e661ad2c06": "Carregando aplicativo {{LoopBack}} {0}",
+  "efc6bce92bcb061e3e354a888c7bd76a": "Executando dump para {{stdout}}",
+  "fc1c9755ca71e88d7aaa4be225d07bc8": "URL do endpoint da API REST"
+}
+

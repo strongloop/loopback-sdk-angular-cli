@@ -1,0 +1,11 @@
+{
+  "03bb755ed8213986b1862be937b296bb": "De naam voor gegenereerde module {{Angular}}.",
+  "25eecfaa310e55ace4ef6eba593ba32e": "{0} wordt gegenereerd voor het API-eindpunt {1}",
+  "3669f5dd8a727a4f4247d7ad86993e0c": "\nDe codegenerator ondersteunt geen toepassingen die gebaseerd zijn op\n{{LoopBack}}-versies die ouder zijn dan 1.6.0. Breng een upgrade aan op uw project\nnaar een recente versie van {{LoopBack}} en voer deze functie opnieuw uit.\n",
+  "af39e85bbd74a37c9a8beec4268564bd": "Genereer {{Angular $resource}}-services voor de toepassing {{LoopBack}}.\nSyntaxis:\n    $0 {{[options] server/app.js [client/js/lb-services.js]}}",
+  "dbef1e1c2cc9f52ae9aacca33e9d92c2": "Gegenereerde servicesbron wordt opgeslagen in {0}",
+  "dff77762368d4e45c34a01e661ad2c06": "{{LoopBack}}-app {0} wordt geladen",
+  "efc6bce92bcb061e3e354a888c7bd76a": "Dump uitgevoerd naar {{stdout}}",
+  "fc1c9755ca71e88d7aaa4be225d07bc8": "URL van het REST API-eindpunt"
+}
+
