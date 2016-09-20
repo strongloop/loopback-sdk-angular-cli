@@ -1,0 +1,11 @@
+{
+  "03bb755ed8213986b1862be937b296bb": "生成的 {{Angular}} 模块的名称。",
+  "25eecfaa310e55ace4ef6eba593ba32e": "正在针对 API 端点 {1} 生成 {0}",
+  "3669f5dd8a727a4f4247d7ad86993e0c": "\n代码生成器不支持基于 \n{{LoopBack}} V1.6.0 之前的版本的应用程序。请将项目升级\n为最新版本的 {{LoopBack}}，并再次运行此工具。\n",
+  "af39e85bbd74a37c9a8beec4268564bd": "针对 {{LoopBack}} 应用程序生成 {{Angular $resource}} 服务。\n用法：\n    $0 {{[options] server/app.js [client/js/lb-services.js]}}",
+  "dbef1e1c2cc9f52ae9aacca33e9d92c2": "正在将生成的服务源保存到 {0}",
+  "dff77762368d4e45c34a01e661ad2c06": "正在装入 {{LoopBack}} 应用程序 {0}",
+  "efc6bce92bcb061e3e354a888c7bd76a": "正在转储到 {{stdout}}",
+  "fc1c9755ca71e88d7aaa4be225d07bc8": "REST API 端点的 URL"
+}
+

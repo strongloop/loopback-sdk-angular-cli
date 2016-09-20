@@ -1,0 +1,11 @@
+{
+  "03bb755ed8213986b1862be937b296bb": "생성된 {{Angular}} 모듈의 이름입니다.",
+  "25eecfaa310e55ace4ef6eba593ba32e": "API 엔드포인트 {1}에 대해 {0} 생성",
+  "3669f5dd8a727a4f4247d7ad86993e0c": "\n코드 생성기에서는 \n{{LoopBack}} 버전 1.6.0 이전을 기반으로 하는 애플리케이션을 지원하지 않습니다. \n최신 버전의 {{LoopBack}}(으)로 프로젝트를 업그레이드하고 이 도구를 다시 실행하십시오.\n",
+  "af39e85bbd74a37c9a8beec4268564bd": "{{LoopBack}} 애플리케이션에 대한 {{Angular $resource}} 서비스를 생성합니다. \n사용법:\n $0 {{[options] server/app.js [client/js/lb-services.js]}}",
+  "dbef1e1c2cc9f52ae9aacca33e9d92c2": "생성된 서비스 소스를 {0}에 저장 중",
+  "dff77762368d4e45c34a01e661ad2c06": "{{LoopBack}} 앱 {0} 로드 중",
+  "efc6bce92bcb061e3e354a888c7bd76a": "{{stdout}}에 덤핑 중",
+  "fc1c9755ca71e88d7aaa4be225d07bc8": "REST API 엔드포인트의 URL"
+}
+
