@@ -1,11 +1,11 @@
 {
-  "03bb755ed8213986b1862be937b296bb": "生成される {{Angular}} モジュールの名前。",
+  "03bb755ed8213986b1862be937b296bb": "生成された {{Angular}} モジュールの名前。",
   "25eecfaa310e55ace4ef6eba593ba32e": "API エンドポイント {1} の {0} を生成しています",
-  "3669f5dd8a727a4f4247d7ad86993e0c": "\nコード・ジェネレーターは、バージョン 1.6.0 より古い \n{{LoopBack}} に基づくアプリケーションをサポートしていません。プロジェクトを最新バージョンの\n{{LoopBack}} にアップグレードしてから、このツールを再度実行してください。\n",
+  "3669f5dd8a727a4f4247d7ad86993e0c": "\nコード・ジェネレーターは、1.6.0 より古い {{LoopBack}} バージョンに基づく\nアプリケーションをサポートしていません。プロジェクトを新しいバージョンの {{LoopBack}} に\nアップグレードしてから、このツールをもう一度実行してください。\n",
   "af39e85bbd74a37c9a8beec4268564bd": "{{LoopBack}} アプリケーションの {{Angular $resource}} サービスを生成します。\n使用法:\n    $0 {{[options] server/app.js [client/js/lb-services.js]}}",
-  "dbef1e1c2cc9f52ae9aacca33e9d92c2": "生成されたサービス・ソースを {0} に保存します",
+  "dbef1e1c2cc9f52ae9aacca33e9d92c2": "生成されたサービス・ソースを {0} に保存しています",
   "dff77762368d4e45c34a01e661ad2c06": "{{LoopBack}} アプリケーション {0} をロードしています",
-  "efc6bce92bcb061e3e354a888c7bd76a": "{{stdout}} にダンプします",
+  "efc6bce92bcb061e3e354a888c7bd76a": "{{stdout}} にダンプしています",
   "fc1c9755ca71e88d7aaa4be225d07bc8": "REST API エンドポイントの URL"
 }
 
