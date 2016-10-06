@@ -19,7 +19,9 @@ var argv = optimist
   .describe('m', g.f('The name for generated {{Angular}} module.'))
   .default('m', 'lbServices')
   .describe('u', g.f('URL of the REST API end-point'))
-  .alias({ u : 'url', m: 'module-name' })
+  .describe('s', 'Include schema definition in generated models')
+  .boolean('s')
+  .alias({ u : 'url', m: 'module-name', s: 'include-schema' })
   .demand(1)
   .argv;
 
@@ -39,9 +41,14 @@ if (app.booting) {
 function runGenerator() {
   var ngModuleName = argv['module-name'] || 'lbServices';
   var apiUrl = argv['url'] || app.get('restApiRoot') || '/api';
+  var includeSchema = argv['include-schema'] || false;
 
   g.error('Generating %j for the API endpoint %j', ngModuleName, apiUrl);
-  var result = generator.services(app, ngModuleName, apiUrl);
+  var result = generator.services(app, {
+    ngModuleName: ngModuleName,
+    apiUrl: apiUrl,
+    includeSchema: includeSchema,
+  });
 
   if (outputFile) {
     outputFile = path.resolve(outputFile);
