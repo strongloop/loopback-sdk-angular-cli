@@ -1,3 +1,17 @@
+2016-10-14, Version 2.2.0
+=========================
+
+ * Update pt translation file (Candy)
+
+ * Add "-s" flag to enable "includeSchema" option (Jan Hapke)
+
+ * Update de and ja translation files (Candy)
+
+ * Update translation files - round#2 (Candy)
+
+ * globalization: add translated strings (gunjpan)
+
+
 2016-09-05, Version 2.1.0
 =========================
 
