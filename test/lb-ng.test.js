@@ -2,6 +2,7 @@
 // Node module: loopback-sdk-angular-cli
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
+'use strict';
 
 var extend = require('util')._extend;
 var fs = require('fs.extra');
@@ -93,7 +94,7 @@ describe('lb-ng', function() {
   function runLbNg() {
     // empty object for env so it does not inherit env-vars from parent process
     // this avoids debug messages affecting the stdout
-    var options = {env:{}};
+    var options = {env: {}};
     var argv = [process.execPath, require.resolve('../bin/lb-ng')]
                 .concat(Array.prototype.slice.call(arguments))
                 .map(JSON.stringify)

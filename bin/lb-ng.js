@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+'use strict';
 
 var path = require('path');
 var SG = require('strong-globalize');
@@ -21,7 +22,7 @@ var argv = optimist
   .describe('u', g.f('URL of the REST API end-point'))
   .describe('s', 'Include schema definition in generated models')
   .boolean('s')
-  .alias({ u : 'url', m: 'module-name', s: 'include-schema' })
+  .alias({u: 'url', m: 'module-name', s: 'include-schema'})
   .demand(1)
   .argv;
 
@@ -68,7 +69,7 @@ function runGenerator() {
   // https://github.com/joyent/node/issues/3584
   Promise.all([
     waitForEvent(process.stdout, 'drain'),
-    waitForEvent(process.stderr, 'drain')
+    waitForEvent(process.stderr, 'drain'),
   ]).then(function() {
     process.exit();
   });

@@ -6,8 +6,8 @@
     "lb-ng": "bin/lb-ng.js"
   },
   "scripts": {
-    "pretest": "jshint .",
-    "test": "mocha --timeout 5000"
+    "test": "mocha --timeout 5000",
+    "posttest": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -41,8 +41,9 @@
     "bluebird": "^1.2.1",
     "chai": "^1.9.1",
     "debug": "^2.2.0",
+    "eslint": "^2.13.1",
+    "eslint-config-loopback": "^4.0.0",
     "fs.extra": "^1.2.1",
-    "jshint": "^2.5.0",
     "loopback": "^2.25.0",
     "loopback-boot": "^2.14.1",
     "loopback-datasource-juggler": "^2.42.0",
