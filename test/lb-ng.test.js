@@ -48,6 +48,13 @@ describe('lb-ng', function() {
       });
   });
 
+  it('uses the namespacing common modules from command-line', function() {
+    return runLbNg('-c', 'true', '-d', '_', sampleAppJs)
+      .spread(function(script, stderr) {
+        expect(script).to.match(/lbServices_Resource/);
+      });
+  });
+
   it('uses the url from command-line', function() {
     return runLbNg('-u', 'http://foo/bar', sampleAppJs)
       .spread(function(script, stderr) {
