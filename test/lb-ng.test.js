@@ -56,10 +56,12 @@ describe('lb-ng', function() {
   });
 
   it('passes the include-schema flag from the command-line', function() {
-    return runLbNg('-s', sampleAppJs)
-      .spread(function(script, stderr) {
-        expect(script).to.contain('R\.schema =');
-        expect(script).to.contain('schema of the model');
+    var outfile = path.resolve(SANDBOX, 'lb-services.js');
+    return runLbNg('-s', sampleAppJs, outfile)
+      .spread(function() {
+        var script = fs.readFileSync(outfile);
+        expect(script).to.match(/R\.schema =/);
+        expect(script).to.match(/schema of the model/);
       });
   });
 
@@ -80,13 +82,6 @@ describe('lb-ng', function() {
         'presence of late-initialized model'
       ).to.be.ok();
     });
-  });
-
-  it('does not truncate the output', function() {
-    return runLbNg(sampleAppJs)
-      .spread(function(script, stderr) {
-        expect(script).to.match(/\}\)\(window, window.angular\);/);
-      });
   });
 
   //-- Helpers --

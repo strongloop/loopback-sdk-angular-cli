@@ -6,7 +6,6 @@ var SG = require('strong-globalize');
 SG.SetRootDir(path.resolve(__dirname, '..'));
 var g = SG();
 var fs = require('fs');
-var Promise = require('bluebird');
 var semver = require('semver');
 var optimist = require('optimist');
 var generator = require('loopback-sdk-angular');
@@ -60,17 +59,9 @@ function runGenerator() {
     process.stdout.write(result);
   }
 
-  // The app.js scaffolded by `slc lb project` loads strong-agent module that
-  // used to have a bug where it prevented the application from exiting.
-  // To work around that issue, we are explicitly exiting here.
-  //
-  // The exit is deferred to both stdout and err is drained
-  // in order to prevent the Node bug:
+  // The exit is deferred to the next tick in order to prevent the Node bug:
   // https://github.com/joyent/node/issues/3584
-  Promise.all([
-    waitForEvent(process.stdout, 'drain'),
-    waitForEvent(process.stderr, 'drain'),
-  ]).then(function() {
+  process.nextTick(function() {
     process.exit();
   });
 }
@@ -91,11 +82,4 @@ function assertLoopBackVersion() {
       'to a recent version of {{LoopBack}} and run this tool again.\n');
     process.exit(1);
   }
-}
-
-function waitForEvent(obj, name) {
-  return new Promise(function(resolve, reject) {
-    obj.once(name, resolve);
-    obj.once('error', reject);
-  });
 }
