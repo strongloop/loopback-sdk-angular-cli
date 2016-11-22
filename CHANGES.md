@@ -1,3 +1,13 @@
+2016-11-22, Version 2.3.0
+=========================
+
+ * Revert "Fix process.stdout exiting before done" (David Cheung)
+
+ * readme: update URL to new doc site (David Cheung)
+
+ * use eslint in replace of jshint (David Cheung)
+
+
 2016-10-14, Version 2.2.0
 =========================
 
