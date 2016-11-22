@@ -28,10 +28,10 @@
     "url": "https://github.com/strongloop/loopback-sdk-angular-cli/issues"
   },
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">=4"
   },
   "dependencies": {
-    "loopback-sdk-angular": "^1.8.0",
+    "loopback-sdk-angular": "^3.0.0",
     "optimist": "^0.6.1",
     "semver": "^2.2.1",
     "strong-globalize": "^2.6.0"
