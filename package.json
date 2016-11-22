@@ -43,9 +43,8 @@
     "eslint": "^2.13.1",
     "eslint-config-loopback": "^4.0.0",
     "fs.extra": "^1.2.1",
-    "loopback": "^2.25.0",
+    "loopback": "^3.0.0",
     "loopback-boot": "^2.14.1",
-    "loopback-datasource-juggler": "^2.42.0",
     "mocha": "^1.18.2"
   }
 }
