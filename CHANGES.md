@@ -1,3 +1,15 @@
+2017-02-06, Version 3.0.0
+=========================
+
+ * Update paid support URL (Siddhi Pai)
+
+ * Use loopback@3 for tests (Miroslav Bajtoš)
+
+ * Drop support for Node v0.10 and v0.12 (Miroslav Bajtoš)
+
+ * Start the development of the next major version (Miroslav Bajtoš)
+
+
 2016-11-22, Version 2.3.0
 =========================
 

@@ -1,6 +1,6 @@
 {
   "name": "loopback-sdk-angular-cli",
-  "version": "3.0.0-alpha.1",
+  "version": "3.0.0",
   "description": "CLI tools for auto-generating Angular $resource services for LoopBack",
   "bin": {
     "lb-ng": "bin/lb-ng.js"
@@ -31,7 +31,7 @@
     "node": ">=4"
   },
   "dependencies": {
-    "loopback-sdk-angular": "^3.0.0",
+    "loopback-sdk-angular": "^3.1.0",
     "optimist": "^0.6.1",
     "semver": "^2.2.1",
     "strong-globalize": "^2.6.0"
