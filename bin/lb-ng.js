@@ -19,9 +19,14 @@ var argv = optimist
   .describe('m', g.f('The name for generated {{Angular}} module.'))
   .default('m', 'lbServices')
   .describe('u', g.f('URL of the REST API end-point'))
+  .describe('c', g.f('boolean to namespace the common models.'))
+  .boolean('c')
+  .describe('d', g.f('namespace delimiter.'))
+  .default('d', '.')
   .describe('s', 'Include schema definition in generated models')
   .boolean('s')
-  .alias({u: 'url', m: 'module-name', s: 'include-schema'})
+  .alias({u: 'url', m: 'module-name', s: 'include-schema',
+    c: 'namespace-common-models', d: 'namespace-delimiter'})
   .demand(1)
   .argv;
 
@@ -42,11 +47,14 @@ function runGenerator() {
   var ngModuleName = argv['module-name'] || 'lbServices';
   var apiUrl = argv['url'] || app.get('restApiRoot') || '/api';
   var includeSchema = argv['include-schema'] || false;
-
+  var namespaceDelimiter = argv['namespace-delimiter'] || '.';
+  var namespaceCommonModels = argv['namespace-common-models'] || false;
   g.error('Generating %j for the API endpoint %j', ngModuleName, apiUrl);
   var result = generator.services(app, {
     ngModuleName: ngModuleName,
     apiUrl: apiUrl,
+    namespaceCommonModels: namespaceCommonModels,
+    namespaceDelimiter: namespaceDelimiter,
     includeSchema: includeSchema,
   });
 
