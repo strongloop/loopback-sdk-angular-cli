@@ -1,3 +1,13 @@
+2017-07-20, Version 3.1.0
+=========================
+
+ * Add flags for namespacing config (Kenny Sabir)
+
+ * Replicate new issue_template from loopback (Siddhi Pai)
+
+ * Replicate issue_template from loopback repo (Siddhi Pai)
+
+
 2017-02-06, Version 3.0.0
 =========================
 
