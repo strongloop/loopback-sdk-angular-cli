@@ -2,6 +2,8 @@
   "03bb755ed8213986b1862be937b296bb": "產生的 {{Angular}} 模組的名稱。",
   "25eecfaa310e55ace4ef6eba593ba32e": "正在為 API 端點 {1} 產生 {0}",
   "3669f5dd8a727a4f4247d7ad86993e0c": "\n程式碼產生器不支援以 1.6.0 之前\n的 {{LoopBack}} 版本為基礎的應用程式。請將您的專案升級\n到最新版的 {{LoopBack}}，再重新執行此工具。\n",
+  "a0dfff5af3ed168969b32427820c6205": "名稱空間定界字元。",
+  "aaf2cd75317f7b1b53e34516f92d57ba": "為一般模型設定名稱空間的布林值。",
   "af39e85bbd74a37c9a8beec4268564bd": "為您的 {{LoopBack}} 應用程式產生 {{Angular $resource}} 服務。\n用法：\n    $0 {{[options] server/app.js [client/js/lb-services.js]}}",
   "dbef1e1c2cc9f52ae9aacca33e9d92c2": "正在將產生的服務來源儲存至 {0}",
   "dff77762368d4e45c34a01e661ad2c06": "正在載入 {{LoopBack}} 應用程式 {0}",
