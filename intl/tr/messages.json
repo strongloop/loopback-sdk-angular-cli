@@ -2,6 +2,8 @@
   "03bb755ed8213986b1862be937b296bb": "Oluşturulan {{Angular}} modülünün adı.",
   "25eecfaa310e55ace4ef6eba593ba32e": "{1} API uç noktası için {0} oluşturuluyor",
   "3669f5dd8a727a4f4247d7ad86993e0c": "\nKod oluşturucu, 1.6.0 sürümünden eski \n{{LoopBack}} sürümlerine dayalı uygulamaları desteklemiyor. Lütfen projenizi\ndaha yeni bir {{LoopBack}} sürümüne yükseltin ve bu aracı yeniden çalıştırın.\n",
+  "a0dfff5af3ed168969b32427820c6205": "ad alanı sınırlayıcısı.",
+  "aaf2cd75317f7b1b53e34516f92d57ba": "genel modellere yönelik ad alanı için boole.",
   "af39e85bbd74a37c9a8beec4268564bd": "{{LoopBack}} uygulamanız için {{Angular $resource}} hizmetleri oluşturur.\nKullanım:\n    $0 {{[options] server/app.js [client/js/lb-services.js]}}",
   "dbef1e1c2cc9f52ae9aacca33e9d92c2": "Oluşturulan hizmet kaynağı {0} içine kaydediliyor",
   "dff77762368d4e45c34a01e661ad2c06": "{{LoopBack}} uygulaması {0} yükleniyor",

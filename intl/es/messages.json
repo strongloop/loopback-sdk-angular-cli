@@ -2,6 +2,8 @@
   "03bb755ed8213986b1862be937b296bb": "El nombre para el módulo {{Angular}} generado.",
   "25eecfaa310e55ace4ef6eba593ba32e": "Generando {0} para el punto final de API {1}",
   "3669f5dd8a727a4f4247d7ad86993e0c": "\nEl generador de códigos no da soporte a aplicaciones basadas en versiones de \n{{LoopBack}} anteriores a 1.6.0. Actualice el proyecto\na una versión reciente de {{LoopBack}} y ejecute de nuevo esta herramienta.\n",
+  "a0dfff5af3ed168969b32427820c6205": "delimitador de espacio de nombres",
+  "aaf2cd75317f7b1b53e34516f92d57ba": "booleano para dar espacio de nombres a los modelos comunes.",
   "af39e85bbd74a37c9a8beec4268564bd": "Generar servicios {{Angular $resource}} para la aplicación {{LoopBack}}.\nUso:\n    $0 {{[options] server/app.js [client/js/lb-services.js]}}",
   "dbef1e1c2cc9f52ae9aacca33e9d92c2": "Guardando el origen de servicios generado en {0}",
   "dff77762368d4e45c34a01e661ad2c06": "Cargando la aplicación {{LoopBack}} {0}",

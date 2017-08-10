@@ -2,6 +2,8 @@
   "03bb755ed8213986b1862be937b296bb": "De naam voor gegenereerde module {{Angular}}.",
   "25eecfaa310e55ace4ef6eba593ba32e": "{0} wordt gegenereerd voor het API-eindpunt {1}",
   "3669f5dd8a727a4f4247d7ad86993e0c": "\nDe codegenerator ondersteunt geen toepassingen die gebaseerd zijn op\n{{LoopBack}}-versies die ouder zijn dan 1.6.0. Breng een upgrade aan op uw project\nnaar een recente versie van {{LoopBack}} en voer deze functie opnieuw uit.\n",
+  "a0dfff5af3ed168969b32427820c6205": "begrenzingsteken voor naamruimte/",
+  "aaf2cd75317f7b1b53e34516f92d57ba": "booleaanse waarde voor naamruimte van algemene modellen.",
   "af39e85bbd74a37c9a8beec4268564bd": "Genereer {{Angular $resource}}-services voor de toepassing {{LoopBack}}.\nSyntaxis:\n    $0 {{[options] server/app.js [client/js/lb-services.js]}}",
   "dbef1e1c2cc9f52ae9aacca33e9d92c2": "Gegenereerde servicesbron wordt opgeslagen in {0}",
   "dff77762368d4e45c34a01e661ad2c06": "{{LoopBack}}-app {0} wordt geladen",
