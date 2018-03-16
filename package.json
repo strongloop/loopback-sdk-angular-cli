@@ -33,7 +33,7 @@
   "dependencies": {
     "loopback-sdk-angular": "^3.1.0",
     "optimist": "^0.6.1",
-    "semver": "^2.2.1",
+    "semver": "^5.5.0",
     "strong-globalize": "^2.6.0"
   },
   "devDependencies": {
