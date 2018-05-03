@@ -40,7 +40,7 @@ assertLoopBackVersion();
 if (app.booting) {
   app.on('booted', runGenerator);
 } else {
-  runGenerator();
+  setTimeout(function(){ console.log('run timeout'); runGenerator(); }, 3000);
 }
 
 function runGenerator() {
