@@ -9,9 +9,12 @@ var fs = require('fs.extra');
 var path = require('path');
 var Promise = require('bluebird');
 var exec = Promise.promisify(require('child_process').exec);
-var expect = require('chai').expect;
 var debug = require('debug')('test');
 var parse = require('loopback-sdk-angular/parse-helper');
+
+var chai = require('chai');
+chai.use(require('dirty-chai'));
+var expect = chai.expect;
 
 describe('lb-ng', function() {
   var sampleAppJs = require.resolve('./fixtures/app.js');
@@ -91,16 +94,16 @@ describe('lb-ng', function() {
     });
   });
 
-  //-- Helpers --
+  // -- Helpers --
 
   function runLbNg() {
     // empty object for env so it does not inherit env-vars from parent process
     // this avoids debug messages affecting the stdout
     var options = {env: {}};
     var argv = [process.execPath, require.resolve('../bin/lb-ng')]
-                .concat(Array.prototype.slice.call(arguments))
-                .map(JSON.stringify)
-                .join(' ');
+      .concat(Array.prototype.slice.call(arguments))
+      .map(JSON.stringify)
+      .join(' ');
     debug('--EXECFILE[%s]--', argv);
     return exec(argv, options)
       .then(function(args) {

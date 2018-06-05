@@ -74,7 +74,7 @@ function runGenerator() {
   });
 }
 
-//--- helpers ---//
+// --- helpers ---//
 
 function assertLoopBackVersion() {
   var Module = require('module');

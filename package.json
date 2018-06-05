@@ -28,23 +28,24 @@
     "url": "https://github.com/strongloop/loopback-sdk-angular-cli/issues"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "dependencies": {
     "loopback-sdk-angular": "^3.1.0",
     "optimist": "^0.6.1",
     "semver": "^5.5.0",
-    "strong-globalize": "^2.6.0"
+    "strong-globalize": "^4.1.0"
   },
   "devDependencies": {
-    "bluebird": "^1.2.1",
-    "chai": "^1.9.1",
-    "debug": "^2.2.0",
-    "eslint": "^2.13.1",
-    "eslint-config-loopback": "^4.0.0",
+    "bluebird": "^1.2.4",
+    "chai": "^4.1.2",
+    "debug": "^3.1.0",
+    "dirty-chai": "^2.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-loopback": "^10.0.0",
     "fs.extra": "^1.2.1",
     "loopback": "^3.0.0",
     "loopback-boot": "^2.14.1",
-    "mocha": "^1.18.2"
+    "mocha": "^5.2.0"
   }
 }

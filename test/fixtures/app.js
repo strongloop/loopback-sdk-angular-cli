@@ -11,8 +11,8 @@ app.dataSource('db', {connector: 'memory'});
 app.set('restApiRoot', '/rest-api-root');
 
 var TestModel = app.registry.createModel(
-    'TestModel',
-    {foobaz: 'string'}
+  'TestModel',
+  {foobaz: 'string'}
 );
 app.model(TestModel, {dataSource: 'db'});
 
