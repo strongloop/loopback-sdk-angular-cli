@@ -94,16 +94,16 @@ describe('lb-ng', function() {
     });
   });
 
-  //-- Helpers --
+  // -- Helpers --
 
   function runLbNg() {
     // empty object for env so it does not inherit env-vars from parent process
     // this avoids debug messages affecting the stdout
     var options = {env: {}};
     var argv = [process.execPath, require.resolve('../bin/lb-ng')]
-                .concat(Array.prototype.slice.call(arguments))
-                .map(JSON.stringify)
-                .join(' ');
+      .concat(Array.prototype.slice.call(arguments))
+      .map(JSON.stringify)
+      .join(' ');
     debug('--EXECFILE[%s]--', argv);
     return exec(argv, options)
       .then(function(args) {
