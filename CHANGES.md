@@ -1,3 +1,25 @@
+2018-06-05, Version 3.2.0
+=========================
+
+ * Upgrade eslint to latest (Miroslav Bajtoš)
+
+ * Update most dependencies to latest (Miroslav Bajtoš)
+
+ * Drop Node 4.x, add travis and npmrc (Miroslav Bajtoš)
+
+ * Upgrade semver to 5.x (Miroslav Bajtoš)
+
+ * Update LICENSE (Diana Lau)
+
+ * Create Issue and PR Templates (#74) (Sakib Hasan)
+
+ * Update translated strings Q3 2017 (Allen Boone)
+
+ * Add CODEOWNER file (Diana Lau)
+
+ * update messages.json (Diana Lau)
+
+
 2017-07-20, Version 3.1.0
 =========================
 
