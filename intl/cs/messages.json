@@ -1,0 +1,13 @@
+{
+  "03bb755ed8213986b1862be937b296bb": "Název pro generovaný modul {{Angular}}.",
+  "25eecfaa310e55ace4ef6eba593ba32e": "Generování {0} pro koncový bod rozhraní API {1}",
+  "3669f5dd8a727a4f4247d7ad86993e0c": "\nGenerátor kódu nepodporuje aplikace založené na verzích \n{{LoopBack}} starších než 1.6.0. Proveďte upgrade svého projektu\n na novější verzi {{LoopBack}} a spusťte tento nástroj znovu.\n",
+  "a0dfff5af3ed168969b32427820c6205": "Oddělovač oborů názvů.",
+  "aaf2cd75317f7b1b53e34516f92d57ba": "Logická hodnota pro obor názvů společných modelů.",
+  "af39e85bbd74a37c9a8beec4268564bd": "Generujte služby {{Angular $resource}} pro aplikaci {{LoopBack}}.\nPoužití:\n    $0 {{[options] server/app.js [client/js/lb-services.js]}}",
+  "dbef1e1c2cc9f52ae9aacca33e9d92c2": "Uložení generovaného zajištění zdrojů služeb do {0}",
+  "dff77762368d4e45c34a01e661ad2c06": "Načítání aplikace {{LoopBack}} {0}",
+  "efc6bce92bcb061e3e354a888c7bd76a": "Výpis paměti do {{stdout}}",
+  "fc1c9755ca71e88d7aaa4be225d07bc8": "Adresa URL koncového bodu rozhraní REST API "
+}
+
