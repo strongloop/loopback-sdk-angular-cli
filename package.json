@@ -1,6 +1,6 @@
 {
   "name": "loopback-sdk-angular-cli",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "CLI tools for auto-generating Angular $resource services for LoopBack",
   "bin": {
     "lb-ng": "bin/lb-ng.js"
