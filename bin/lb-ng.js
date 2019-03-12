@@ -37,12 +37,10 @@ g.error('Loading {{LoopBack}} app %j', appFile);
 var app = require(appFile);
 assertLoopBackVersion();
 
-if (app.booting) {
+if (app.booting !== false) {
   app.on('booted', runGenerator);
 } else {
-  setTimeout(function () {
-    runGenerator();
-  }, 1000);
+  runGenerator();
 }
 
 function runGenerator() {
