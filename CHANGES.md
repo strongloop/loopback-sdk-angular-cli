@@ -1,4 +1,14 @@
-2018-07-17, Version 3.3.0
+2020-03-06, Version 3.3.1
+=========================
+
+ * Update LTS status in README (Miroslav Bajtoš)
+
+ * chore: update copyrights years (Agnes Lin)
+
+ * add lts annoucement (jannyHou)
+
+
+2018-07-16, Version 3.3.0
 =========================
 
  * [WebFM] cs/pl/ru translation (candytangnb)
